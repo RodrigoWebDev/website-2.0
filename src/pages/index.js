@@ -29,6 +29,18 @@ class HomeIndex extends React.Component {
                         <ul className="actions">
                             <li><a href="#" className="button">Saiba mais</a></li>
                         </ul>
+
+                        <div class="skills">
+                            <ul>
+                                <li>HTML
+                                    <ul class="skills-dropdown">
+                                        <li></li>
+                                    </ul>
+                                </li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                            </ul>
+                        </div>
                     </section>
 
                     {/* ============================ Portfolio ============================ */}
