@@ -1,0 +1,12 @@
+.portfolio-home img{
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-link {
+    color: inherit;
+}
+
+.portfolio-link-img {
+    border: none;
+}

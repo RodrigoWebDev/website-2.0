@@ -1,0 +1,333 @@
+[
+    {
+        "MetaData": [
+            {
+                "SiteName": "Rodrigo Queiroz - Desenvolvedor Front End",
+                "Description": "Rodrigo Queiroz, desenvolvedor Front End e futuro Full Stack Node. Bem vindo ao meu site :)",
+                "About": "Trabalho com desenvovlimento Front End a pouco mais de 4 anos. Eu adoro javascript, meu objetivo atual é me tornar FullStack com Node.js, dessa forma vou conseguir desenvolver minhas idéias de apps de forma mais completa. Atualmente estou desenvolvendo no ecosistema React e Gatsby",
+                "SocialMedias":[
+                    {
+                        "Name": "Github",
+                        "Link": "https://github.com/RodrigoWebDev",
+                        "Class": "fa-github"
+                    },
+                    {
+                        "Name": "Linkedin",
+                        "Link": "https://www.linkedin.com/in/rodrigo-queiroz-chagas/",
+                        "Class": "fa-linkedin-square"
+                    },
+                    {
+                        "Name": "Instagram",
+                        "Link": "https://www.instagram.com/rodrigo.queiroz.chagas/",
+                        "Class": "fa-instagram"
+                    },
+                    {
+                        "Name": "What's app",
+                        "Link": "https://api.whatsapp.com/send?1=pt_BR&phone=556192191727",
+                        "Class": "fa-whatsapp"
+                    }
+                ]
+            }
+        ],
+        
+        "Projects": [
+            {
+                "Name": "React Watch App",
+                "Thumb": "react-watch.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/xNyMzM",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Loja Artcoco",
+                "Thumb": "artcoco.jpg",
+                "Url":"https://www.artcocojoias.com.br",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Biotwo",
+                "Thumb": "biotwo.jpg",
+                "Url":"https://www.biotwo.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Lafemme Calçados",
+                "Thumb": "lafemme.jpg",
+                "Url":"https://www.lafemmecalcados.com.br",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Mega Polo Sábado",
+                "Thumb": "megapolo-sabado.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/megapolo-sabado-email/",
+                "Type": "landinpage"
+            },
+            {
+                "Name": "Mega Polo - MFW26",
+                "Thumb": "mfw26.jpg",
+                "Url":"https://www.megapolomoda.com.br/mfw26/",
+                "Url-alt": "http://rqueiroz.surge.sh/lp/mfw26-landingpage/",
+                "Type": "landinpage"
+            },
+            {
+                "Name": "MPM Store Email Marketing",
+                "Thumb": "mpm-store-emkt.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/email-mpm-clio/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Degrant Jeans - MFW26",
+                "Thumb": "degrant-mfw26.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/dgn-mfw26-email/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Interoceanica",
+                "Thumb": "interoceanica-manutencao.jpg",
+                "Url":"http://www.interoceanica.com.br/",
+                "Url-alt": "http://rqueiroz.surge.sh/lp/interoceanica/",
+                "Type": "landinpage"
+            },
+            {
+                "Name": "Bytebank",
+                "Thumb": "bytebank.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/bytebank-email/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Brascol - Girl Power",
+                "Thumb": "brascol-girl-power.jpg",
+                "Url":"https://brascol.com.br/girl-power",
+                "Type": "landinpage"
+            },
+            {
+                "Name": "Brascol - Coleção inverno 2019",
+                "Thumb": "brascol-colecao-inverno.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/brascol-inverno-email/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Brascol - Expo baby lp",
+                "Thumb": "brascol-expobaby-lp.jpg",
+                "Url":"https://www.brascol.com.br/expo-baby",
+                "Type": "landingpage"
+            },
+            {
+                "Name": "Brascol - Expo baby email",
+                "Thumb": "brascol-expobaby.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/brascol-expobaby2-email/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Alcacuz - inverno 2019",
+                "Thumb": "alcacuz-inverno-2019.jpg",
+                "Url":"https://www.alcacuz.com.br/preview/pagina-inverno-2019-9/v",
+                "Type": "landingpage"
+            },
+            {
+                "Name": "Brascol 15% OFF",
+                "Thumb": "brascol-15off.jpg",
+                "Url":"http://rqueiroz.surge.sh/emkt/brascol-15off-ultima-email/",
+                "Type": "emkt"
+            },
+            {
+                "Name": "Alcacuz - Quem somos",
+                "Thumb": "alcacuz-quem-somos.jpg",
+                "Url":"https://www.alcacuz.com.br/sobre-a-marca-8/v",
+                "Type": "landingpage"
+            },
+            {
+                "Name": "Wine",
+                "Thumb": "wine.jpg",
+                "Url":"https://www.wine.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "You Go Girls",
+                "Thumb": "yougogirls.jpg",
+                "Url":"https://yougogirls.com.br/",
+                "Type": "blog"
+            },
+            {
+                "Name": "Deputado Hugo Leal - Petrópolis",
+                "Thumb": "petropolis.jpg",
+                "Url":"http://www.deputadohugoleal.com.br/petropolis/",
+                "Type": "landingpage"
+            },
+            {
+                "Name": "Hightone",
+                "Thumb": "hightone.jpg",
+                "Url":"https://hightone.com",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "MPM Celebrate",
+                "Thumb": "mpm-celebrate.jpg",
+                "Url":"http://rqueiroz.surge.sh/lp/mpm-celebrate-landingpage/",
+                "Type": "landinpage"
+            },
+            {
+                "Name": "Burn Studio",
+                "Thumb": "burn-studio.jpg",
+                "Url":"https://rodrigowebdev.github.io/burn-studio/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Shark Tank Hub",
+                "Thumb": "shark-tank-hub.jpg",
+                "Url":"https://www.sharktankhub.com/",
+                "Type": "blog"
+            },
+            {
+                "Name": "Merlin's Potions",
+                "Thumb": "merlin.jpg",
+                "Url":"https://rodrigowebdev.github.io/enext-teste/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Markai",
+                "Thumb": "markai.jpg",
+                "Url":"http://markai.com.br/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Visual Art Studio",
+                "Thumb": "visual-art-studio.jpg",
+                "Url":"https://rodrigowebdev.github.io/visual-art-webpage/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Periphery band",
+                "Thumb": "periphery.jpg",
+                "Url":"https://rodrigowebdev.github.io/periphery-band/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Half Template",
+                "Thumb": "half-template.jpg",
+                "Url":"https://rodrigowebdev.github.io/half-template/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Max Festa",
+                "Thumb": "max-festa.jpg",
+                "Url":"https://rodrigowebdev.github.io/max-festa/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Select Game",
+                "Thumb": "select-game.jpg",
+                "Url":"https://rodrigowebdev.github.io/select-game/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Password Strength with jQuery",
+                "Thumb": "passowrd-strength.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/QBvGPR",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Recriando raízes",
+                "Thumb": "recriando-raizes.jpg",
+                "Url":"http://www.recriandoraizes.org.br/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "The Digital Nomad",
+                "Thumb": "digital-nomad.jpg",
+                "Url":"https://rodrigowebdev.github.io/landing-page/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Blog recriando raízes",
+                "Thumb": "blog-recriando-raizes.jpg",
+                "Url":"http://noticiasrr.epizy.com/?i=1",
+                "Type": "blog"
+            },
+            {
+                "Name": "Calculate your BMI Jquery",
+                "Thumb": "bmi.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/EpZXdO",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Javascript Bubble Game",
+                "Thumb": "bubble-game.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/MBpmGY",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Simple Javascript Clock",
+                "Thumb": "clock.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/aGexGM",
+                "Type": "webapp"
+        
+            },
+            {
+                "Name": "To do list with javascript",
+                "Thumb": "to-do-list2.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/qYQPNe",
+                "Type": "webapp"
+        
+            },
+            {
+                "Name": "jQuery Lightbox",
+                "Thumb": "jquery-light-box.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/wxrYaM",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Simple Responsive Javascript Timer",
+                "Thumb": "timer.jpg",
+                "Url":"https://codepen.io/RodrigoWebDev/full/ZRzbqK",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Mobile app interface",
+                "Thumb": "mobile-interface.jpg",
+                "Url":"https://rodrigowebdev.github.io/mobile-blog-app-interface/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "Restaurante app Web based",
+                "Thumb": "confirm-reservation.jpg",
+                "Url":"https://rodrigowebdev.github.io/confirm-reservation/",
+                "Type": "institucional"
+            },
+            {
+                "Name": "To do list",
+                "Thumb": "to-do-list.png",
+                "Url":"https://rodrigowebdev.github.io/to-do-list/",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Pac Man Tribute Page",
+                "Thumb": "pac-man.jpg",
+                "Url":"https://rodrigowebdev.github.io/tribute-page/",
+                "Type": "institucional"
+            }
+        ],
+
+        "Companies" :[
+            {
+                "Name": "Agência 2bdigital",
+                "Thumb": "2bdigital.jpg",
+                "Url":"https://www.agencia2bdigital.com.br/"
+            },
+            {
+                "Name": "NSH Technologies",
+                "Thumb": "nsh.jpg",
+                "Url":"http://nsh-tech.com/"
+            },
+            {
+                "Name": "Agência Double",
+                "Thumb": "double.jpg",
+                "Url":"https://www.linkedin.com/company/doublemarketingdigital/about/"
+            },
+            {
+                "Name": "Upwork",
+                "Thumb": "upwork.jpg",
+                "Url":"https://www.upwork.com/"
+            }
+        ]
+    }
+]
