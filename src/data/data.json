@@ -29,6 +29,83 @@
                 ]
             }
         ],
+
+        "Skills": [
+            {
+                "Name": "HTML5",
+                "Libs": [
+                    {
+                        "Name": "Pug.js/Jade",
+                        "Icon": "pug.svg"
+                    }
+                ]
+            },
+            {
+                "Name": "CSS3",
+                "Libs": [
+                    {
+                        "Name": "BEM",
+                        "Icon": "bem.png"
+                    },
+                    {
+                        "Name": "Bootstrap",
+                        "Icon": "bootstrap.svg"
+                    },
+                    {
+                        "Name": "Less/Sass",
+                        "Icon": "sass.svg"
+                    },
+                    {
+                        "Name": "Bulma.css",
+                        "Icon": "bulma.svg"
+                    },
+                    {
+                        "Name": "W3.css",
+                        "Icon": "w3.svg"
+                    }
+                ]
+            },
+            {
+                "Name": "Javascript",
+                "Libs": [
+                    {
+                        "Name": "React.js",
+                        "Icon": "react.svg"
+                    },
+                    {
+                        "Name": "GatsbyJS",
+                        "Icon": "gatsby.svg"
+                    },
+                    {
+                        "Name": "jQuery",
+                        "Icon": "jquery.svg"
+                    },
+                    {
+                        "Name": "Babel",
+                        "Icon": "babel.svg"
+                    },
+                    {
+                        "Name": "webpack",
+                        "Icon": "webpack.svg"
+                    }
+                ]
+
+            },
+            {
+                "Name": "Back-end",
+                "Libs": [
+                    {
+                        "Name": "Node.js",
+                        "Icon": "node.svg"
+                    },
+                    {
+                        "Name": "Wordpress",
+                        "Icon": "wordpress.svg"
+                    }
+                ]
+
+            }
+        ],
         
         "Projects": [
             {
