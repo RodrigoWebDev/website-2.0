@@ -4,37 +4,18 @@ import Layout from '../components/layout'
 import Gallery from '../components/Gallery'
 import DataJson from '../data/data.json'
 import customCSS from '../assets/css/custom.css'
+import $ from "jquery"
 
 const Data = DataJson[0];
 const MetaData = Data.MetaData[0];
 const Skills = Data.Skills;
 
-Skills.map((item, index) => {
-  console.log("Nome > ",  item.Name);
-  item.Libs.map((e) => {
-    console.log("Libs Name > ", e.Name);
-  })
-})
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
 class HomeIndex extends React.Component {
   componentDidMount() {
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
+    $(".accordion").click(function(){
+      $(this).toggleClass("accordion--open");
+      $(this).next().slideToggle();
+    })
   }
 
   render() {
@@ -88,10 +69,6 @@ class HomeIndex extends React.Component {
               Name,
               Description
             }))} />
-
-            <ul className="actions">
-              <li><a href="#" className="button">Portfolio Completo ></a></li>
-            </ul>
           </section>
 
           {/* ============================ Contact ============================ */}

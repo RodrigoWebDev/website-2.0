@@ -2,6 +2,19 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class Gallery extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            fullPortfolio: false
+        }
+        this.handleCLick = this.handleCLick.bind(this);
+    }
+
+    handleCLick(){
+        this.setState({
+            fullPortfolio : !this.state.fullPortfolio
+        });
+    }
     
     renderGallery () {
         const { images } = this.props;
@@ -11,8 +24,9 @@ class Gallery extends Component {
         const gallery = images.map((obj, i) => {
             if(i < 4){
                 return (
-                    <article className="6u 12u$(xsmall) work-item" key={i}>
+                    <div key={i}>
                         <a
+                            target="_blank"
                             className="portfolio-link-img"
                             href={obj.Url}
                         >
@@ -20,15 +34,40 @@ class Gallery extends Component {
                         </a>
     
                         <h3>{obj.Name}</h3>
-                        <p><a className="portfolio-link" href={obj.Url}>{obj.Url}</a></p>
-                    </article>
+                        <p><a target="_blank" className="portfolio-link" href={obj.Url}>{obj.Url}</a></p>
+                    </div>
+                );
+            }
+        });
+
+        const galleryFull = images.map((obj, i) => {
+            if(i > 4){
+                return (
+                    <div key={i}>
+                        <a
+                            target="_blank"
+                            className="portfolio-link-img"
+                            href={obj.Url}
+                        >
+                            <img src={`${require('../assets/images/portfolio/' + obj.Thumb)}`} />
+                        </a>
+    
+                        <h3>{obj.Name}</h3>
+                        <p><a target="_blank" className="portfolio-link" href={obj.Url}>{obj.Url}</a></p>
+                    </div>
                 );
             }
         });
 
         return (
-            <div className="row">
+            <div className="portfolio-grid">
                 {gallery}
+                <div className="button-portfolio-container">
+                    <button className="button" onClick={this.handleCLick}>
+                        {this.state.fullPortfolio ? "Ocultar porfolio" : "Ver portfólio completo"}
+                    </button>
+                </div>
+                {this.state.fullPortfolio ? galleryFull : null}
             </div>
         );
     }
