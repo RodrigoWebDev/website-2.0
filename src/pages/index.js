@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery'
 import DataJson from '../data/data.json'
 import customCSS from '../assets/css/custom.css'
 import $ from "jquery"
+import favicon from "../assets/images/website-icon.png"
 
 const Data = DataJson[0];
 const MetaData = Data.MetaData[0];
@@ -23,7 +24,11 @@ class HomeIndex extends React.Component {
 
     return (
       <Layout>
-        <Helmet>
+        <Helmet
+          link={[
+            {rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}`}
+          ]}
+        >
           <title>{MetaData.SiteName}</title>
           <meta name="description" content={MetaData.Description} />
         </Helmet>
