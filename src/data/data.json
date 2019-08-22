@@ -109,6 +109,24 @@
         
         "Projects": [
             {
+                "Name": "Keita",
+                "Thumb": "keita.jpg",
+                "Url":"http://keita.com.br/keita/",
+                "Type": "wordpress"
+            },
+            {
+                "Name": "Voltz Motors",
+                "Thumb": "voltz.jpg",
+                "Url":"http://voltzmotors.com",
+                "Type": "webapp"
+            },
+            {
+                "Name": "React Conversor",
+                "Thumb": "react-conversor.jpg",
+                "Url":"http://rqueiroz.surge.sh/conversor-react/",
+                "Type": "webapp"
+            },
+            {
                 "Name": "React Watch App",
                 "Thumb": "react-watch.jpg",
                 "Url":"https://codepen.io/RodrigoWebDev/full/xNyMzM",
