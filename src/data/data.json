@@ -109,9 +109,27 @@
         
         "Projects": [
             {
+                "Name": "Sissa",
+                "Thumb": "sissa.jpg",
+                "Url":"https://www.sissa.core.dcg.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Tarjab",
+                "Thumb": "tarjab.jpg",
+                "Url":"http://tarjab.com.br/",
+                "Type": "wordpress"
+            },
+            {
+                "Name": "Vizzela",
+                "Thumb": "vizzela.jpg",
+                "Url":"https://www.vizzela.com.br/",
+                "Type": "ecommerce"
+            },
+            {
                 "Name": "Keita",
                 "Thumb": "keita.jpg",
-                "Url":"http://keita.com.br/keita/",
+                "Url":"http://keita.com.br/",
                 "Type": "wordpress"
             },
             {
