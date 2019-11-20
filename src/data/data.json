@@ -109,6 +109,12 @@
         
         "Projects": [
             {
+                "Name": "Github React App",
+                "Thumb": "github-search-app.png",
+                "Url":"https://github-react-app.netlify.com/",
+                "Type": "webapp"
+            },
+            {
                 "Name": "Sissa",
                 "Thumb": "sissa.jpg",
                 "Url":"https://www.sissa.core.dcg.com.br/",
