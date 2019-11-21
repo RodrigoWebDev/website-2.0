@@ -82,7 +82,7 @@ class HomeIndex extends React.Component {
             <p>Quer bater um papo, falar de negócios, ou se interessou pelos meus serviços? Então segue abaixo os meios para me contatar :)</p>
             <div>
               <ul className="actions">
-                <li><a className="button icon fa-whatsapp" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=556192191727">What's app</a></li>
+                <li><a className="button icon fa-whatsapp" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=5511961198782">What's app</a></li>
                 <li><a className="button icon fa-envelope-o" href="mailto:rodrigo.queiroz.chagas@gmail.com">Email</a></li>
                 <li><a className="button icon fa-linkedin-square" target="_blank" href="https://www.linkedin.com/in/rodrigo-queiroz-chagas/">Linkedin</a></li>
               </ul>
