@@ -109,6 +109,24 @@
         
         "Projects": [
             {
+                "Name": "Nutriport",
+                "Thumb": "nutriport.jpg",
+                "Url":"https://www2.nutriport.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Artesana",
+                "Thumb": "artesana.jpg",
+                "Url":"https://www.artesana.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "Use Noho",
+                "Thumb": "usenoho.jpg",
+                "Url":"https://www2.usenoho.com/",
+                "Type": "ecommerce"
+            },
+            {
                 "Name": "Github React App",
                 "Thumb": "github-search-app.png",
                 "Url":"https://github-react-app.netlify.com/",
@@ -117,7 +135,7 @@
             {
                 "Name": "Sissa",
                 "Thumb": "sissa.jpg",
-                "Url":"https://www.sissa.core.dcg.com.br/",
+                "Url":"https://www.sissa.com/",
                 "Type": "ecommerce"
             },
             {
