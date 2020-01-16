@@ -22,7 +22,7 @@ class Gallery extends Component {
         if (!images) return;
 
         const gallery = images.map((obj, i) => {
-            if(i < 4){
+            if(i <= 3){
                 return (
                     <div key={i}>
                         <a
@@ -41,7 +41,7 @@ class Gallery extends Component {
         });
 
         const galleryFull = images.map((obj, i) => {
-            if(i > 4){
+            if(i > 3){
                 return (
                     <div key={i}>
                         <a
