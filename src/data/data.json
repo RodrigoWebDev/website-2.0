@@ -109,6 +109,12 @@
         
         "Projects": [
             {
+                "Name": "Star Wars Web App",
+                "Thumb": "starwars.jpg",
+                "Url":"https://starwars-ui-app.netlify.com/",
+                "Type": "webapp"
+            },
+            {
                 "Name": "React Tweet Box",
                 "Thumb": "react-tweet.jpg",
                 "Url":"https://codepen.io/RodrigoWebDev/full/PowGGva",
