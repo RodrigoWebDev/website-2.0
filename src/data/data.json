@@ -109,6 +109,30 @@
         
         "Projects": [
             {
+                "Name": "Voltz Motors",
+                "Thumb": "voltz.jpg",
+                "Url":"http://voltzmotors.com",
+                "Type": "webapp"
+            },
+            {
+                "Name": "Wine",
+                "Thumb": "wine.jpg",
+                "Url":"https://www.wine.com.br/",
+                "Type": "ecommerce"
+            },
+            {
+                "Name": "You Go Girls",
+                "Thumb": "yougogirls.jpg",
+                "Url":"https://yougogirls.com.br/",
+                "Type": "blog"
+            },
+            {
+                "Name": "Shark Tank Hub",
+                "Thumb": "shark-tank-hub.jpg",
+                "Url":"https://www.sharktankhub.com/",
+                "Type": "blog"
+            },
+            {
                 "Name": "Star Wars Web App",
                 "Thumb": "starwars.jpg",
                 "Url":"https://starwars-ui-app.netlify.com/",
@@ -291,18 +315,6 @@
                 "Type": "landingpage"
             },
             {
-                "Name": "Wine",
-                "Thumb": "wine.jpg",
-                "Url":"https://www.wine.com.br/",
-                "Type": "ecommerce"
-            },
-            {
-                "Name": "You Go Girls",
-                "Thumb": "yougogirls.jpg",
-                "Url":"https://yougogirls.com.br/",
-                "Type": "blog"
-            },
-            {
                 "Name": "Deputado Hugo Leal - Petrópolis",
                 "Thumb": "petropolis.jpg",
                 "Url":"http://www.deputadohugoleal.com.br/petropolis/",
@@ -325,12 +337,6 @@
                 "Thumb": "burn-studio.jpg",
                 "Url":"https://rodrigowebdev.github.io/burn-studio/",
                 "Type": "institucional"
-            },
-            {
-                "Name": "Shark Tank Hub",
-                "Thumb": "shark-tank-hub.jpg",
-                "Url":"https://www.sharktankhub.com/",
-                "Type": "blog"
             },
             {
                 "Name": "Merlin's Potions",

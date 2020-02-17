@@ -66,7 +66,7 @@ class HomeIndex extends React.Component {
 
           {/* ============================ Portfolio ============================ */}
           <section id="two" className="portfolio-home">
-            <h2>Trabalhos Recentes</h2>
+            <h2>Top Works</h2>
 
             <Gallery images={Data.Projects.map(({ id, Url, Thumb, Name, Description }) => ({
               Url,
