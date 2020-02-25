@@ -205,12 +205,6 @@
                 "Type": "wordpress"
             },
             {
-                "Name": "Voltz Motors",
-                "Thumb": "voltz.jpg",
-                "Url":"http://voltzmotors.com",
-                "Type": "webapp"
-            },
-            {
                 "Name": "React Conversor",
                 "Thumb": "react-conversor.jpg",
                 "Url":"http://rqueiroz.surge.sh/conversor-react/",
