@@ -149,3 +149,7 @@ button.swal2-confirm.swal2-styled:hover {
 button.swal2-confirm.swal2-styled a {
   border-bottom: none !important;
 }
+
+#header .image.avatar {
+  width: 10.25em;
+}
