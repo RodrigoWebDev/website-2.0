@@ -6,10 +6,10 @@ import DataJson from "../data/data.json"
 import "../assets/css/custom.css"
 import $ from "jquery"
 import favicon from "../assets/images/website-icon.png"
+import Skills from "../components/Skills"
 
 const Data = DataJson[0]
 const MetaData = Data.MetaData[0]
-const Skills = Data.Skills
 
 class HomeIndex extends React.Component {
   constructor(props) {
@@ -62,30 +62,7 @@ class HomeIndex extends React.Component {
 
             <div className="skills">
               <h2>Skills</h2>
-              <div>
-                {Skills.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <h3 className="accordion">{item.Name}</h3>
-                      <ul className="panel">
-                        {item.Libs.map((e, i) => {
-                          return (
-                            <li key={i}>
-                              <img
-                                width="20"
-                                src={`${require("../assets/images/skills/" +
-                                  e.Icon)}`}
-                                alt={e.Name}
-                              />
-                              {e.Name}
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  )
-                })}
-              </div>
+              <Skills skills={Data.Skills} />
             </div>
           </section>
 
