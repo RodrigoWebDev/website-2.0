@@ -38,7 +38,7 @@
   justify-content: space-between;
 }
 
-.accordion {
+.Collapsible__trigger {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -49,31 +49,39 @@
   outline: none;
   font-size: 15px;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.active,
-.accordion:hover {
+.Collapsible__trigger:hover {
   background-color: #ccc;
 }
 
 .panel {
   padding: 0 18px;
-  display: none;
   background-color: white;
   overflow: hidden;
 }
 
 .panel li {
   display: flex;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
-.accordion::after {
+.panel li img {
+  margin-right: 7px;
+  height: auto;
+}
+
+.Collapsible__trigger::after {
   content: "\f067";
   font-family: FontAwesome;
   color: #a2a2a2;
 }
 
-.accordion--open::after {
+.Collapsible__trigger.is-open::after {
   content: "\f068";
 }
 

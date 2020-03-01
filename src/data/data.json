@@ -37,12 +37,28 @@
           {
             "Name": "Pug.js/Jade",
             "Icon": "pug.svg"
+          },
+          {
+            "Name": "HTML Semântico",
+            "Icon": "semantic-web.svg"
+          },
+          {
+            "Name": "Acessibilidade",
+            "Icon": "accessibility.svg"
           }
         ]
       },
       {
         "Name": "CSS3",
         "Libs": [
+          {
+            "Name": "CSS in JS",
+            "Icon": "jss.png"
+          },
+          {
+            "Name": "Design Responsivo",
+            "Icon": "responsive.svg"
+          },
           {
             "Name": "BEM",
             "Icon": "bem.png"
@@ -69,12 +85,24 @@
         "Name": "Javascript",
         "Libs": [
           {
-            "Name": "React.js",
+            "Name": "React e React Native",
             "Icon": "react.svg"
           },
           {
-            "Name": "GatsbyJS",
+            "Name": "Gatsby",
             "Icon": "gatsby.svg"
+          },
+          {
+            "Name": "Redux",
+            "Icon": "redux.svg"
+          },
+          {
+            "Name": "Jest/TDD",
+            "Icon": "jest.svg"
+          },
+          {
+            "Name": "Consumo de API's",
+            "Icon": "api.svg"
           },
           {
             "Name": "jQuery",
@@ -87,6 +115,14 @@
           {
             "Name": "webpack",
             "Icon": "webpack.svg"
+          },
+          {
+            "Name": "NPM",
+            "Icon": "npm.png"
+          },
+          {
+            "Name": "Yarn",
+            "Icon": "yarn.svg"
           }
         ]
       },
@@ -96,6 +132,10 @@
           {
             "Name": "Node.js",
             "Icon": "node.svg"
+          },
+          {
+            "Name": "Express",
+            "Icon": "express.png"
           },
           {
             "Name": "Wordpress",
