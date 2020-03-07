@@ -36,7 +36,7 @@ export default class Gallery extends Component {
           {this.renderGallery("<")}
           <div className="button-portfolio-container">
             <button className="button" onClick={this.props.handleClick}>
-              {fullPortfolio ? "Ocultar porfolio" : "Ver portfólio completo"}
+              {fullPortfolio ? "Hide portfolio" : "See full portfolio"}
             </button>
           </div>
           {fullPortfolio ? this.renderGallery(">") : null}

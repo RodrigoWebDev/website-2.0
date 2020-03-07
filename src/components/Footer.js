@@ -25,7 +25,7 @@ class Footer extends React.Component {
             })}
           </ul>
           <ul className="copyright">
-            <li>Desenvolvido com React e Gatsby</li>
+            <li>Developed with React and Gatsby</li>
             <li>
               Design:{" "}
               <a

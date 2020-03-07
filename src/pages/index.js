@@ -7,6 +7,8 @@ import "../assets/css/custom.css"
 import $ from "jquery"
 import favicon from "../assets/images/website-icon.png"
 import Skills from "../components/Skills"
+import Contact from "../components/Contact"
+import Services from "../components/Services"
 
 const Data = DataJson[0]
 const MetaData = Data.MetaData[0]
@@ -53,19 +55,6 @@ class HomeIndex extends React.Component {
         </Helmet>
 
         <div id="main">
-          {/* ============================ About ============================ */}
-          <section id="one">
-            <header className="major">
-              <h2>Sobre mim...</h2>
-            </header>
-            <p>{MetaData.About}</p>
-
-            <div className="skills">
-              <h2>Skills</h2>
-              <Skills skills={Data.Skills} />
-            </div>
-          </section>
-
           {/* ============================ Portfolio ============================ */}
           <section id="two" className="portfolio-home">
             <h2>Top Works</h2>
@@ -85,46 +74,24 @@ class HomeIndex extends React.Component {
             />
           </section>
 
-          {/* ============================ Contact ============================ */}
-          <section id="three">
-            <h2>Entre em contato</h2>
-            <p>
-              Quer bater um papo, falar de negócios, ou se interessou pelos meus
-              serviços? Então segue abaixo os meios para me contatar :)
-            </p>
-            <div>
-              <ul className="actions">
-                <li>
-                  <a
-                    className="button icon fa-whatsapp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://api.whatsapp.com/send?1=pt_BR&phone=5511961198782"
-                  >
-                    What's app
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="button icon fa-envelope-o"
-                    href="mailto:rodrigo.queiroz.chagas@gmail.com"
-                  >
-                    Email
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="button icon fa-linkedin-square"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/rodrigo-queiroz-chagas/"
-                  >
-                    Linkedin
-                  </a>
-                </li>
-              </ul>
+          <Services />
+
+          {/* ============================ About ============================ */}
+          <section id="one">
+            <div className="skills">
+              <h2>Skills</h2>
+              <Skills skills={Data.Skills} />
             </div>
           </section>
+
+          <section>
+            <header className="two">
+              <h2>About me</h2>
+            </header>
+            <p>{MetaData.About}</p>
+          </section>
+
+          <Contact />
         </div>
       </Layout>
     )

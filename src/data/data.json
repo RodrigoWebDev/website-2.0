@@ -2,9 +2,9 @@
   {
     "MetaData": [
       {
-        "SiteName": "Rodrigo Queiroz - Desenvolvedor Front End",
-        "Description": "Rodrigo Queiroz, desenvolvedor Front End e futuro Full Stack Node. Bem vindo ao meu site :)",
-        "About": "Trabalho com desenvovlimento Front End a pouco mais de 4 anos. Eu adoro javascript, meu objetivo atual é me tornar FullStack com Node.js, dessa forma vou conseguir desenvolver minhas idéias de apps de forma mais completa. Atualmente estou desenvolvendo no ecosistema React e Gatsby",
+        "SiteName": "Rodrigo Queiroz - Front End Developer",
+        "Description": "Rodrigo Queiroz, Front End developer and future Full Stack Node. Welcome to my website :)",
+        "About": "I have been working with Front End development for just over 4 years. I love javascript, my current goal is to become FullStack with Node.js, this way I will be able to develop my app ideas more completely. I am currently developing on the React and Gatsby ecosystem",
         "SocialMedias": [
           {
             "Name": "Github",
@@ -37,28 +37,12 @@
           {
             "Name": "Pug.js/Jade",
             "Icon": "pug.svg"
-          },
-          {
-            "Name": "HTML Semântico",
-            "Icon": "semantic-web.svg"
-          },
-          {
-            "Name": "Acessibilidade",
-            "Icon": "accessibility.svg"
           }
         ]
       },
       {
         "Name": "CSS3",
         "Libs": [
-          {
-            "Name": "CSS in JS",
-            "Icon": "jss.png"
-          },
-          {
-            "Name": "Design Responsivo",
-            "Icon": "responsive.svg"
-          },
           {
             "Name": "BEM",
             "Icon": "bem.png"
@@ -85,24 +69,12 @@
         "Name": "Javascript",
         "Libs": [
           {
-            "Name": "React e React Native",
+            "Name": "React.js",
             "Icon": "react.svg"
           },
           {
-            "Name": "Gatsby",
+            "Name": "GatsbyJS",
             "Icon": "gatsby.svg"
-          },
-          {
-            "Name": "Redux",
-            "Icon": "redux.svg"
-          },
-          {
-            "Name": "Jest/TDD",
-            "Icon": "jest.svg"
-          },
-          {
-            "Name": "Consumo de API's",
-            "Icon": "api.svg"
           },
           {
             "Name": "jQuery",
@@ -115,14 +87,6 @@
           {
             "Name": "webpack",
             "Icon": "webpack.svg"
-          },
-          {
-            "Name": "NPM",
-            "Icon": "npm.png"
-          },
-          {
-            "Name": "Yarn",
-            "Icon": "yarn.svg"
           }
         ]
       },
@@ -132,10 +96,6 @@
           {
             "Name": "Node.js",
             "Icon": "node.svg"
-          },
-          {
-            "Name": "Express",
-            "Icon": "express.png"
           },
           {
             "Name": "Wordpress",
@@ -171,6 +131,158 @@
         "Type": "blog"
       },
       {
+        "Name": "Nutriport",
+        "Thumb": "nutriport.jpg",
+        "Url": "https://www2.nutriport.com.br/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Artesana",
+        "Thumb": "artesana.jpg",
+        "Url": "https://www.artesana.com.br/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Use Noho",
+        "Thumb": "usenoho.jpg",
+        "Url": "https://www2.usenoho.com/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Sissa",
+        "Thumb": "sissa.jpg",
+        "Url": "https://www.sissa.com/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Tarjab",
+        "Thumb": "tarjab.jpg",
+        "Url": "http://tarjab.com.br/",
+        "Type": "wordpress"
+      },
+      {
+        "Name": "Vizzela",
+        "Thumb": "vizzela.jpg",
+        "Url": "https://www.vizzela.com.br/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Keita",
+        "Thumb": "keita.jpg",
+        "Url": "http://keita.com.br/",
+        "Type": "wordpress"
+      },
+      {
+        "Name": "Loja Artcoco",
+        "Thumb": "artcoco.jpg",
+        "Url": "https://www.artcocojoias.com.br",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Biotwo",
+        "Thumb": "biotwo.jpg",
+        "Url": "https://www.biotwo.com.br/",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Lafemme Calçados",
+        "Thumb": "lafemme.jpg",
+        "Url": "https://www.lafemmecalcados.com.br",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "Mega Polo - MFW26",
+        "Thumb": "mfw26.jpg",
+        "Url": "https://www.megapolomoda.com.br/mfw26/",
+        "Url-alt": "http://rqueiroz.surge.sh/lp/mfw26-landingpage/",
+        "Type": "landinpage"
+      },
+      {
+        "Name": "Interoceanica",
+        "Thumb": "interoceanica-manutencao.jpg",
+        "Url": "http://www.interoceanica.com.br/",
+        "Url-alt": "http://rqueiroz.surge.sh/lp/interoceanica/",
+        "Type": "landinpage"
+      },
+      {
+        "Name": "Brascol - Girl Power",
+        "Thumb": "brascol-girl-power.jpg",
+        "Url": "https://brascol.com.br/girl-power",
+        "Type": "landinpage"
+      },
+      {
+        "Name": "Brascol - Coleção inverno 2019",
+        "Thumb": "brascol-colecao-inverno.jpg",
+        "Url": "http://rqueiroz.surge.sh/emkt/brascol-inverno-email/",
+        "Type": "emkt"
+      },
+      {
+        "Name": "Brascol - Expo baby lp",
+        "Thumb": "brascol-expobaby-lp.jpg",
+        "Url": "https://www.brascol.com.br/expo-baby",
+        "Type": "landingpage"
+      },
+      {
+        "Name": "Alcacuz - inverno 2019",
+        "Thumb": "alcacuz-inverno-2019.jpg",
+        "Url": "https://www.alcacuz.com.br/preview/pagina-inverno-2019-9/v",
+        "Type": "landingpage"
+      },
+      {
+        "Name": "Alcacuz - Quem somos",
+        "Thumb": "alcacuz-quem-somos.jpg",
+        "Url": "https://www.alcacuz.com.br/sobre-a-marca-8/v",
+        "Type": "landingpage"
+      },
+      {
+        "Name": "Deputado Hugo Leal - Petrópolis",
+        "Thumb": "petropolis.jpg",
+        "Url": "http://www.deputadohugoleal.com.br/petropolis/",
+        "Type": "landingpage"
+      },
+      {
+        "Name": "Hightone",
+        "Thumb": "hightone.jpg",
+        "Url": "https://hightone.com",
+        "Type": "ecommerce"
+      },
+      {
+        "Name": "MPM Celebrate",
+        "Thumb": "mpm-celebrate.jpg",
+        "Url": "http://rqueiroz.surge.sh/lp/mpm-celebrate-landingpage/",
+        "Type": "landinpage"
+      },
+      {
+        "Name": "Recriando raízes",
+        "Thumb": "recriando-raizes.jpg",
+        "Url": "http://www.recriandoraizes.org.br/",
+        "Type": "institucional"
+      },
+      {
+        "Name": "Markai",
+        "Thumb": "markai.jpg",
+        "Url": "http://markai.com.br/",
+        "Type": "institucional"
+      },
+      {
+        "Name": "Mocky Form",
+        "Thumb": "mocky.jpg",
+        "Url": "https://mocky-form.netlify.com/#login",
+        "Type": "webapp"
+      },
+      {
+        "Name": "Propz Landing Page",
+        "Thumb": "propz-lp.jpg",
+        "Url": "https://propz-lp.netlify.com/",
+        "Type": "landingpage"
+      },
+      {
+        "Name": "Propz Email Marketing",
+        "Thumb": "propz-emkt.jpg",
+        "Url": "https://propz-emkt.netlify.com/",
+        "Type": "emkt"
+      },
+      {
         "Name": "Calculator Android App",
         "Thumb": "calc-android-app.jpg",
         "Type": "android-app",
@@ -202,52 +314,10 @@
         "Type": "webapp"
       },
       {
-        "Name": "Nutriport",
-        "Thumb": "nutriport.jpg",
-        "Url": "https://www2.nutriport.com.br/",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Artesana",
-        "Thumb": "artesana.jpg",
-        "Url": "https://www.artesana.com.br/",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Use Noho",
-        "Thumb": "usenoho.jpg",
-        "Url": "https://www2.usenoho.com/",
-        "Type": "ecommerce"
-      },
-      {
         "Name": "Github React App",
         "Thumb": "github-search-app.png",
         "Url": "https://github-react-app.netlify.com/",
         "Type": "webapp"
-      },
-      {
-        "Name": "Sissa",
-        "Thumb": "sissa.jpg",
-        "Url": "https://www.sissa.com/",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Tarjab",
-        "Thumb": "tarjab.jpg",
-        "Url": "http://tarjab.com.br/",
-        "Type": "wordpress"
-      },
-      {
-        "Name": "Vizzela",
-        "Thumb": "vizzela.jpg",
-        "Url": "https://www.vizzela.com.br/",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Keita",
-        "Thumb": "keita.jpg",
-        "Url": "http://keita.com.br/",
-        "Type": "wordpress"
       },
       {
         "Name": "React Conversor",
@@ -262,22 +332,10 @@
         "Type": "webapp"
       },
       {
-        "Name": "Loja Artcoco",
-        "Thumb": "artcoco.jpg",
-        "Url": "https://www.artcocojoias.com.br",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Biotwo",
-        "Thumb": "biotwo.jpg",
-        "Url": "https://www.biotwo.com.br/",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "Lafemme Calçados",
-        "Thumb": "lafemme.jpg",
-        "Url": "https://www.lafemmecalcados.com.br",
-        "Type": "ecommerce"
+        "Name": "MPM Store Email Marketing",
+        "Thumb": "mpm-store-emkt.jpg",
+        "Url": "http://rqueiroz.surge.sh/emkt/email-mpm-clio/",
+        "Type": "emkt"
       },
       {
         "Name": "Mega Polo Sábado",
@@ -286,30 +344,10 @@
         "Type": "landinpage"
       },
       {
-        "Name": "Mega Polo - MFW26",
-        "Thumb": "mfw26.jpg",
-        "Url": "https://www.megapolomoda.com.br/mfw26/",
-        "Url-alt": "http://rqueiroz.surge.sh/lp/mfw26-landingpage/",
-        "Type": "landinpage"
-      },
-      {
-        "Name": "MPM Store Email Marketing",
-        "Thumb": "mpm-store-emkt.jpg",
-        "Url": "http://rqueiroz.surge.sh/emkt/email-mpm-clio/",
-        "Type": "emkt"
-      },
-      {
         "Name": "Degrant Jeans - MFW26",
         "Thumb": "degrant-mfw26.jpg",
         "Url": "http://rqueiroz.surge.sh/emkt/dgn-mfw26-email/",
         "Type": "emkt"
-      },
-      {
-        "Name": "Interoceanica",
-        "Thumb": "interoceanica-manutencao.jpg",
-        "Url": "http://www.interoceanica.com.br/",
-        "Url-alt": "http://rqueiroz.surge.sh/lp/interoceanica/",
-        "Type": "landinpage"
       },
       {
         "Name": "Bytebank",
@@ -318,64 +356,16 @@
         "Type": "emkt"
       },
       {
-        "Name": "Brascol - Girl Power",
-        "Thumb": "brascol-girl-power.jpg",
-        "Url": "https://brascol.com.br/girl-power",
-        "Type": "landinpage"
-      },
-      {
-        "Name": "Brascol - Coleção inverno 2019",
-        "Thumb": "brascol-colecao-inverno.jpg",
-        "Url": "http://rqueiroz.surge.sh/emkt/brascol-inverno-email/",
-        "Type": "emkt"
-      },
-      {
-        "Name": "Brascol - Expo baby lp",
-        "Thumb": "brascol-expobaby-lp.jpg",
-        "Url": "https://www.brascol.com.br/expo-baby",
-        "Type": "landingpage"
-      },
-      {
         "Name": "Brascol - Expo baby email",
         "Thumb": "brascol-expobaby.jpg",
         "Url": "http://rqueiroz.surge.sh/emkt/brascol-expobaby2-email/",
         "Type": "emkt"
       },
       {
-        "Name": "Alcacuz - inverno 2019",
-        "Thumb": "alcacuz-inverno-2019.jpg",
-        "Url": "https://www.alcacuz.com.br/preview/pagina-inverno-2019-9/v",
-        "Type": "landingpage"
-      },
-      {
         "Name": "Brascol 15% OFF",
         "Thumb": "brascol-15off.jpg",
         "Url": "http://rqueiroz.surge.sh/emkt/brascol-15off-ultima-email/",
         "Type": "emkt"
-      },
-      {
-        "Name": "Alcacuz - Quem somos",
-        "Thumb": "alcacuz-quem-somos.jpg",
-        "Url": "https://www.alcacuz.com.br/sobre-a-marca-8/v",
-        "Type": "landingpage"
-      },
-      {
-        "Name": "Deputado Hugo Leal - Petrópolis",
-        "Thumb": "petropolis.jpg",
-        "Url": "http://www.deputadohugoleal.com.br/petropolis/",
-        "Type": "landingpage"
-      },
-      {
-        "Name": "Hightone",
-        "Thumb": "hightone.jpg",
-        "Url": "https://hightone.com",
-        "Type": "ecommerce"
-      },
-      {
-        "Name": "MPM Celebrate",
-        "Thumb": "mpm-celebrate.jpg",
-        "Url": "http://rqueiroz.surge.sh/lp/mpm-celebrate-landingpage/",
-        "Type": "landinpage"
       },
       {
         "Name": "Burn Studio",
@@ -387,12 +377,6 @@
         "Name": "Merlin's Potions",
         "Thumb": "merlin.jpg",
         "Url": "https://rodrigowebdev.github.io/enext-teste/",
-        "Type": "institucional"
-      },
-      {
-        "Name": "Markai",
-        "Thumb": "markai.jpg",
-        "Url": "http://markai.com.br/",
         "Type": "institucional"
       },
       {
@@ -430,12 +414,6 @@
         "Thumb": "passowrd-strength.jpg",
         "Url": "https://codepen.io/RodrigoWebDev/full/QBvGPR",
         "Type": "webapp"
-      },
-      {
-        "Name": "Recriando raízes",
-        "Thumb": "recriando-raizes.jpg",
-        "Url": "http://www.recriandoraizes.org.br/",
-        "Type": "institucional"
       },
       {
         "Name": "The Digital Nomad",
@@ -483,6 +461,12 @@
         "Name": "Simple Responsive Javascript Timer",
         "Thumb": "timer.jpg",
         "Url": "https://codepen.io/RodrigoWebDev/full/ZRzbqK",
+        "Type": "webapp"
+      },
+      {
+        "Name": "Password Calculation Generator",
+        "Thumb": "password.jpg",
+        "Url": "https://password-calculation-generator.netlify.com/",
         "Type": "webapp"
       },
       {
