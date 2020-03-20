@@ -271,6 +271,12 @@
         "Type": "webapp"
       },
       {
+        "Name": "Border Radius Previewer",
+        "Thumb": "border-radius.jpg",
+        "Url": "https://border-radius-previwer.netlify.com/",
+        "Type": "webapp"
+      },
+      {
         "Name": "Propz Landing Page",
         "Thumb": "propz-lp.jpg",
         "Url": "https://propz-lp.netlify.com/",
