@@ -9,6 +9,7 @@ import favicon from "../assets/images/website-icon.png"
 import Skills from "../components/Skills"
 import Contact from "../components/Contact"
 import Services from "../components/Services"
+import axios from "axios"
 
 const Data = DataJson[0]
 const MetaData = Data.MetaData[0]
@@ -18,6 +19,7 @@ class HomeIndex extends React.Component {
     super(props)
     this.state = {
       fullPortfolio: false,
+      portfolio: [],
     }
   }
 
@@ -28,13 +30,29 @@ class HomeIndex extends React.Component {
     })
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     $(".accordion").click(function() {
       $(this).toggleClass("accordion--open")
       $(this)
         .next()
         .slideToggle()
     })
+
+    await axios
+      .get("https://api.github.com/users/RodrigoWebDev/repos")
+      .then(response => {
+        // handle success
+        this.setState({
+          portfolio: response.data,
+        })
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error)
+      })
+      .then(function() {
+        // always executed
+      })
   }
 
   render() {
@@ -57,20 +75,12 @@ class HomeIndex extends React.Component {
         <div id="main">
           {/* ============================ Portfolio ============================ */}
           <section id="two" className="portfolio-home">
-            <h2>Top Works</h2>
+            <h2>Github</h2>
 
             <Gallery
               handleClick={this.handleClick}
               fullPortfolio={this.state.fullPortfolio}
-              images={Data.Projects.map(
-                ({ Url, Thumb, Name, Description, Download }) => ({
-                  Url,
-                  Thumb,
-                  Name,
-                  Description,
-                  Download,
-                })
-              )}
+              items={this.state.portfolio}
             />
           </section>
 

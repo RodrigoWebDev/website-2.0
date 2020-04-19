@@ -4,11 +4,11 @@
 }
 
 .portfolio-link {
-  color: inherit;
+  border: none;
 }
 
-.portfolio-link-img {
-  border: none;
+.portfolio__name {
+  text-transform: capitalize;
 }
 
 .button-portfolio-container {

@@ -5,22 +5,28 @@ import GalleryItem from "./GalleryItem"
 export default class Gallery extends Component {
   renderGallery(c) {
     let gallery
-    const { images } = this.props
+    const { items } = this.props
 
-    if (!images) return
+    console.log("items", items)
+
+    if (!items) return
 
     if (c === "<") {
-      gallery = images.map((obj, i) => {
+      gallery = items.map((item, i) => {
         if (i <= 3) {
           return (
-            <GalleryItem key={i} modalClick={this.props.modalClick} obj={obj} />
+            <GalleryItem
+              key={i}
+              modalClick={this.props.modalClick}
+              obj={item}
+            />
           )
         }
       })
     } else {
-      gallery = images.map((obj, i) => {
+      gallery = items.map((item, i) => {
         if (i > 3) {
-          return <GalleryItem key={i} obj={obj} />
+          return <GalleryItem key={i} obj={item} />
         }
       })
     }

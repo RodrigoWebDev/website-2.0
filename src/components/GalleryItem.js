@@ -1,55 +1,28 @@
 import React from "react"
-import Swal from "sweetalert2"
+import defaultPortfolioImg from "../assets/images/default-portfolio-img.png"
 
-function modalAlert(img, title, download) {
-  return () => {
-    Swal.fire({
-      imageUrl: `${require("../assets/images/portfolio/" + img)}`,
-      title: title,
-      confirmButtonText: `<a href='${download}'>Download</a>`,
-    })
-  }
-}
-
-export default ({ obj }) => {
-  const { Name, Url, Download } = obj
-  const checkTarget = obj.Url === undefined ? "" : "_blank"
-  const checkHref = obj.Url === undefined ? "javascript:void(0)" : obj.Url
-  const openModal = modalAlert(obj.Thumb, obj.Name, obj.Download)
-  const checkClick =
-    obj.Url === "javascript:void(0)" || obj.Url === undefined ? openModal : null
-  const projectUrl = `${require("../assets/images/portfolio/" + obj.Thumb)}`
+const GalleryItem = props => {
+  const obj = props.obj
+  const { homepage, html_url, description } = obj
+  const checkHomepage = homepage === null || homepage === ""
+  const link = checkHomepage ? html_url : homepage
+  const name = obj.name.split("-").join(" ")
+  const src = checkHomepage ? defaultPortfolioImg : `${homepage}thumb.jpg`
 
   return (
     <div>
       <a
-        target={checkTarget}
+        target="_blank"
         rel="noopener noreferrer"
-        className="portfolio-link-img"
-        href={checkHref}
-        onClick={checkClick}
+        className="portfolio-link"
+        href={link}
       >
-        <img src={projectUrl} alt={obj.Name} />
+        <img src={src} alt={name} />
+        <h3 className="portfolio__name">{name}</h3>
+        <p>{description}</p>
       </a>
-
-      <h3>{Name}</h3>
-      <p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className="portfolio-link"
-          href={Url}
-        >
-          {Url}
-        </a>
-      </p>
-      {Download !== undefined && (
-        <p>
-          <button target="_blank" className="button" onClick={openModal}>
-            Download
-          </button>
-        </p>
-      )}
     </div>
   )
 }
+
+export default GalleryItem
