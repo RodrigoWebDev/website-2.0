@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Title from "../components/Title"
+import "./skills.css"
 
 export default class Skills extends Component {
   renderLibs(skills) {

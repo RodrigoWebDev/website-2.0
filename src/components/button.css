@@ -1,0 +1,32 @@
+.button {
+  margin: 0;
+  padding: 0 10px !important;
+  font: inherit;
+  color: #fff !important;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: #5c8ce6;
+  height: 50px;
+  margin: 0 auto;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  max-width: 10px;
+}
+
+.button:hover {
+  background: #477cdf;
+  color: white !important;
+}
+
+.button-float {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  font-size: 12px;
+  height: 32px;
+}

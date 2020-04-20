@@ -1,0 +1,72 @@
+.skills ul {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.skills li {
+  list-style: none;
+}
+
+.skills h3 {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills > div > div {
+  flex-basis: 100%;
+}
+
+@media (min-width: 809px) {
+  .skills > div {
+    justify-content: space-between;
+  }
+
+  .skills > div > div {
+    flex-basis: 49%;
+  }
+}
+
+.accordion {
+  background-color: #eee;
+  color: #787878;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel li {
+  display: flex;
+}
+
+.accordion::after {
+  content: "\f067";
+  font-family: FontAwesome;
+  color: #a2a2a2;
+}
+
+.accordion--open::after {
+  content: "\f068";
+}

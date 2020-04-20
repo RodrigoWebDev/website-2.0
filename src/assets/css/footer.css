@@ -1,0 +1,11 @@
+#footer .icons a:hover {
+  color: #5c8ce6 !important;
+}
+
+#footer .copyright li a:hover {
+  color: #5c8ce6 !important;
+}
+
+#footer ul.icons li .icon:before {
+  font-size: 30px;
+}

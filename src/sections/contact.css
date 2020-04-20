@@ -1,0 +1,19 @@
+.contact .actions li {
+  margin-bottom: 20px;
+  padding-top: 0 !important;
+  width: auto;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.contact .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 809px) {
+  .contact .actions li {
+    margin: 0;
+  }
+}

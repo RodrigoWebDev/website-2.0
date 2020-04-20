@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./Header"
-import "../assets/css/custom.css"
+import Button from "../components/Button"
+import "./layout.css"
 
 export default props => (
   <div>

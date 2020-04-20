@@ -7,6 +7,7 @@ import website from "../assets/images/services/website.png"
 import wordpress from "../assets/images/services/wordpress.png"
 import Button from "../components/Button"
 import Title from "../components/Title"
+import "../assets/css/services.css"
 
 export default () => (
   <section className="services">

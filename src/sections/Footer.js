@@ -1,5 +1,6 @@
 import React from "react"
 import DataJson from "../data/data.json"
+import "./footer.css"
 
 const SocialMedias = DataJson[0].MetaData[0].SocialMedias
 

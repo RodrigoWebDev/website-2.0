@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "../components/Button"
+import "./contact.css"
 
 export default () => (
   <section id="three" className="contact">

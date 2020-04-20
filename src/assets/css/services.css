@@ -1,0 +1,21 @@
+.services ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.services ul > li {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.services ul > li img {
+  max-width: 100%;
+}
+
+@media (min-width: 809px) {
+  .services ul > li {
+    flex-basis: 33%;
+  }
+}

@@ -11,8 +11,8 @@ import Head from "../sections/Head"
 import Skills from "../sections/Skills"
 import Contact from "../sections/Contact"
 import Services from "../sections/Services.js"
-import Portfolio from "../sections/Portfolio"
 import About from "../sections/About"
+import Gallery from "../components/Gallery"
 
 //data
 import DataJson from "../data/data.json"
@@ -63,7 +63,8 @@ export default class HomeIndex extends React.Component {
         <Head metaData={MetaData} />
 
         <div id="main">
-          <Portfolio
+          <Gallery
+            title="Portfolio"
             handleClick={this.handleClick}
             fullPortfolio={this.state.fullPortfolio}
             items={this.state.portfolio}
