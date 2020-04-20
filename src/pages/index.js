@@ -44,12 +44,7 @@ export default class HomeIndex extends React.Component {
 
     await axios
       .get(
-        "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created",
-        {
-          headers: {
-            Authorization: "token ae96317fc1e92e710f3b53270e16b97316b4a44a",
-          },
-        }
+        "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
       )
       .then(response => {
         this.setState({
