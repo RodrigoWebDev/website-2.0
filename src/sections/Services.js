@@ -5,10 +5,12 @@ import psd from "../assets/images/services/psd.png"
 import shop from "../assets/images/services/shop.png"
 import website from "../assets/images/services/website.png"
 import wordpress from "../assets/images/services/wordpress.png"
+import Button from "../components/Button"
+import Title from "../components/Title"
 
 export default () => (
   <section className="services">
-    <h2>My services</h2>
+    <Title>My services</Title>
     <ul>
       <li>
         <img src={website} />
@@ -55,11 +57,11 @@ export default () => (
         <p>And not least, keep your website up to date and working well</p>
       </li>
     </ul>
-    <a
-      class="button icon fa-envelope-o"
+    <Button
+      className="icon fa-envelope-o"
       href="mailto:rodrigo.queiroz.chagas@gmail.com"
     >
       get in touch
-    </a>
+    </Button>
   </section>
 )

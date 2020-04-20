@@ -1,20 +1,25 @@
 import React from "react"
-import Helmet from "react-helmet"
-import Layout from "../components/layout"
-import Gallery from "../components/Gallery"
-import DataJson from "../data/data.json"
-import "../assets/css/custom.css"
 import $ from "jquery"
-import favicon from "../assets/images/website-icon.png"
-import Skills from "../components/Skills"
-import Contact from "../components/Contact"
-import Services from "../components/Services"
 import axios from "axios"
 
+//Styles
+import "../assets/scss/main.scss"
+
+//sections
+import Layout from "../sections/layout"
+import Head from "../sections/Head"
+import Skills from "../sections/Skills"
+import Contact from "../sections/Contact"
+import Services from "../sections/Services.js"
+import Portfolio from "../sections/Portfolio"
+import About from "../sections/About"
+
+//data
+import DataJson from "../data/data.json"
 const Data = DataJson[0]
 const MetaData = Data.MetaData[0]
 
-class HomeIndex extends React.Component {
+export default class HomeIndex extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -24,7 +29,6 @@ class HomeIndex extends React.Component {
   }
 
   handleClick = e => {
-    console.log("click")
     this.setState({
       fullPortfolio: !this.state.fullPortfolio,
     })
@@ -39,67 +43,42 @@ class HomeIndex extends React.Component {
     })
 
     await axios
-      .get("https://api.github.com/users/RodrigoWebDev/repos")
+      .get(
+        "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created",
+        {
+          headers: {
+            Authorization: "token ae96317fc1e92e710f3b53270e16b97316b4a44a",
+          },
+        }
+      )
       .then(response => {
-        // handle success
         this.setState({
           portfolio: response.data,
         })
       })
       .catch(function(error) {
-        // handle error
         console.log(error)
       })
-      .then(function() {
-        // always executed
-      })
+      .then(function() {})
   }
 
   render() {
     return (
       <Layout>
-        <Helmet
-          link={[
-            {
-              rel: "icon",
-              type: "image/png",
-              sizes: "16x16",
-              href: `${favicon}`,
-            },
-          ]}
-        >
-          <title>{MetaData.SiteName}</title>
-          <meta name="description" content={MetaData.Description} />
-        </Helmet>
+        <Head metaData={MetaData} />
 
         <div id="main">
-          {/* ============================ Portfolio ============================ */}
-          <section id="two" className="portfolio-home">
-            <h2>Github</h2>
-
-            <Gallery
-              handleClick={this.handleClick}
-              fullPortfolio={this.state.fullPortfolio}
-              items={this.state.portfolio}
-            />
-          </section>
+          <Portfolio
+            handleClick={this.handleClick}
+            fullPortfolio={this.state.fullPortfolio}
+            items={this.state.portfolio}
+          />
 
           <Services />
 
-          {/* ============================ About ============================ */}
-          <section id="one">
-            <div className="skills">
-              <h2>Skills</h2>
-              <Skills skills={Data.Skills} />
-            </div>
-          </section>
+          <Skills skills={Data.Skills} />
 
-          <section>
-            <header className="two">
-              <h2>About me</h2>
-            </header>
-            <p>{MetaData.About}</p>
-          </section>
+          <About metaData={MetaData} />
 
           <Contact />
         </div>
@@ -107,5 +86,3 @@ class HomeIndex extends React.Component {
     )
   }
 }
-
-export default HomeIndex

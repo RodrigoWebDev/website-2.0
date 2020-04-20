@@ -1,26 +1,19 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import GalleryItem from "./GalleryItem"
+import Button from "./Button"
 
 export default class Gallery extends Component {
   renderGallery(c) {
     let gallery
     const { items } = this.props
 
-    console.log("items", items)
-
     if (!items) return
 
     if (c === "<") {
       gallery = items.map((item, i) => {
         if (i <= 3) {
-          return (
-            <GalleryItem
-              key={i}
-              modalClick={this.props.modalClick}
-              obj={item}
-            />
-          )
+          return <GalleryItem key={i} obj={item} />
         }
       })
     } else {
@@ -41,9 +34,12 @@ export default class Gallery extends Component {
         <div className="portfolio-grid">
           {this.renderGallery("<")}
           <div className="button-portfolio-container">
-            <button className="button" onClick={this.props.handleClick}>
+            <Button
+              jref="javascript:void(0)"
+              handleClick={this.props.handleClick}
+            >
               {fullPortfolio ? "Hide portfolio" : "See full portfolio"}
-            </button>
+            </Button>
           </div>
           {fullPortfolio ? this.renderGallery(">") : null}
         </div>

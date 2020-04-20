@@ -1,8 +1,9 @@
 import React from "react"
+import Button from "../components/Button"
 
 export default () => (
-  <section id="three">
-    <h2>Get it in touch</h2>
+  <section id="three" className="contact">
+    <h2 className="section-title">Get it in touch</h2>
     <p>
       Do you want to chat, talk about business or are you interested in mine
       services? Then see below for ways to get in touch :)
@@ -10,32 +11,28 @@ export default () => (
     <div>
       <ul className="actions">
         <li>
-          <a
-            className="button icon fa-whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            className="icon icon fa-whatsapp"
             href="https://api.whatsapp.com/send?1=pt_BR&phone=5511961198782"
           >
             What's app
-          </a>
+          </Button>
         </li>
         <li>
-          <a
-            className="button icon fa-envelope-o"
+          <Button
+            className="icon icon fa-envelope-o"
             href="mailto:rodrigo.queiroz.chagas@gmail.com"
           >
             Email
-          </a>
+          </Button>
         </li>
         <li>
-          <a
-            className="button icon fa-linkedin-square"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button
+            className="icon fa-linkedin-square"
             href="https://www.linkedin.com/in/rodrigo-queiroz-chagas/"
           >
             Linkedin
-          </a>
+          </Button>
         </li>
       </ul>
     </div>
