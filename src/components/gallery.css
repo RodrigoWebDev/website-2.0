@@ -1,7 +1,12 @@
+.portfolio__img-box {
+  margin-bottom: 16px;
+  border-radius: 0.35em;
+}
+
 .portfolio-home img {
   width: 100%;
   height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #0000001a;
 }
 
 .portfolio-link {
@@ -31,10 +36,6 @@
 
 .portfolio-grid > div {
   width: 100%;
-}
-
-.portfolio__img-box {
-  margin-bottom: 16px;
 }
 
 @media (min-width: 809px) {

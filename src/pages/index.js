@@ -79,6 +79,7 @@ export default class HomeIndex extends React.Component {
     const { fullPortfolio, portfolio, isFetching } = this.state
     const { handleClick } = this
     const skills = Data.Skills
+    const services = Data.services
     return (
       <Layout>
         <Head metaData={MetaData} />
@@ -92,7 +93,7 @@ export default class HomeIndex extends React.Component {
             isFetching={isFetching}
           />
 
-          <Services />
+          <Services serv={services} />
 
           <Skills skills={skills} />
 
