@@ -16,57 +16,19 @@
 .skills > div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .skills > div > div {
-  flex-basis: 100%;
+  flex-basis: 49%;
 }
 
-@media (min-width: 809px) {
-  .skills > div {
-    justify-content: space-between;
-  }
-
-  .skills > div > div {
-    flex-basis: 49%;
-  }
+.progress__bar {
+  height: 4px;
+  background: #d5d5d5;
 }
 
-.accordion {
-  background-color: #eee;
-  color: #787878;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-
-.panel li {
-  display: flex;
-}
-
-.accordion::after {
-  content: "\f067";
-  font-family: FontAwesome;
-  color: #a2a2a2;
-}
-
-.accordion--open::after {
-  content: "\f068";
+.progress__bar-line {
+  height: 4px;
+  background: #5c8ce6;
 }

@@ -32,76 +32,64 @@
 
     "Skills": [
       {
-        "Name": "HTML5",
-        "Libs": [
-          {
-            "Name": "Pug.js/Jade",
-            "Icon": "pug.svg"
-          }
-        ]
+        "name": "HTML5",
+        "percentage": "98%"
       },
       {
-        "Name": "CSS3",
-        "Libs": [
-          {
-            "Name": "BEM",
-            "Icon": "bem.png"
-          },
-          {
-            "Name": "Bootstrap",
-            "Icon": "bootstrap.svg"
-          },
-          {
-            "Name": "Less/Sass",
-            "Icon": "sass.svg"
-          },
-          {
-            "Name": "Bulma.css",
-            "Icon": "bulma.svg"
-          },
-          {
-            "Name": "W3.css",
-            "Icon": "w3.svg"
-          }
-        ]
+        "name": "Web Acessibility",
+        "percentage": "88%"
       },
       {
-        "Name": "Javascript",
-        "Libs": [
-          {
-            "Name": "React.js",
-            "Icon": "react.svg"
-          },
-          {
-            "Name": "GatsbyJS",
-            "Icon": "gatsby.svg"
-          },
-          {
-            "Name": "jQuery",
-            "Icon": "jquery.svg"
-          },
-          {
-            "Name": "Babel",
-            "Icon": "babel.svg"
-          },
-          {
-            "Name": "webpack",
-            "Icon": "webpack.svg"
-          }
-        ]
+        "name": "Semantic HTML",
+        "percentage": "85%"
       },
       {
-        "Name": "Back-end",
-        "Libs": [
-          {
-            "Name": "Node.js",
-            "Icon": "node.svg"
-          },
-          {
-            "Name": "Wordpress",
-            "Icon": "wordpress.svg"
-          }
-        ]
+        "name": "CSS3",
+        "percentage": "98%"
+      },
+      {
+        "name": "Responsive Design",
+        "percentage": "88%"
+      },
+      {
+        "name": "BEM methodology",
+        "percentage": "85%"
+      },
+      {
+        "name": "Bootstrap",
+        "percentage": "81%"
+      },
+      {
+        "name": "Sass/Less",
+        "percentage": "90%"
+      },
+      {
+        "name": "JSS",
+        "percentage": "85%"
+      },
+      {
+        "name": "Javascript",
+        "percentage": "99%"
+      },
+      {
+        "name": "React",
+        "percentage": "90%"
+      },
+      {
+        "name": "Gatsby",
+        "percentage": "85%"
+      },
+      {
+        "name": "jQuery",
+        "percentage": "92%"
+      },
+      {
+        "name": "Webpack/Gulp",
+        "percentage": "80%"
+      },
+      {
+        "name": "Wordpress",
+        "percentage": "86%"
       }
     ],
 

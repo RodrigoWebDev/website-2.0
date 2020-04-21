@@ -7,24 +7,18 @@ export default class Skills extends Component {
     return (
       <>
         {skills.map((item, index) => {
-          const { Name, Libs } = item
+          const { name, percentage } = item
           return (
-            <div key={index}>
-              <h3 className="accordion">{Name}</h3>
-              <ul className="panel">
-                {Libs.map((e, i) => {
-                  return (
-                    <li key={i}>
-                      <img
-                        width="20"
-                        src={`${require("../assets/images/skills/" + e.Icon)}`}
-                        alt={e.Name}
-                      />
-                      {e.Name}
-                    </li>
-                  )
-                })}
-              </ul>
+            <div className="progress-bar-container" key={index}>
+              <div className="progress">
+                <h3 className="progress__title">{name}</h3>
+                <div className="progress__bar">
+                  <div
+                    className="progress__bar-line"
+                    style={{ width: percentage }}
+                  ></div>
+                </div>
+              </div>
             </div>
           )
         })}
