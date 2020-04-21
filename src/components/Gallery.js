@@ -3,6 +3,7 @@ import React, { Component } from "react"
 import GalleryItem from "./GalleryItem"
 import Button from "./Button"
 import Title from "./Title"
+import Loader from "./Loader"
 import "./gallery.css"
 
 export default class Gallery extends Component {
@@ -41,10 +42,13 @@ export default class Gallery extends Component {
       </Button>
     )
     const renderfloatButton = fullPortfolio && floatButton
+    const isFetching = this.props.isFetching
+    const renderLoader = isFetching ? <Loader /> : null
 
     return (
       <section id="two" className="portfolio-home">
         <Title>{title}</Title>
+        {renderLoader}
         <div className="portfolio-grid">
           {renderGallery}
           <div className="button-portfolio-container">

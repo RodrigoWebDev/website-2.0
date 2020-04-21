@@ -12,7 +12,10 @@ import Skills from "../sections/Skills"
 import Contact from "../sections/Contact"
 import Services from "../sections/Services.js"
 import About from "../sections/About"
+
+//Componets
 import Gallery from "../components/Gallery"
+import Load from "../components/Loader"
 
 //data
 import DataJson from "../data/data.json"
@@ -25,6 +28,7 @@ export default class HomeIndex extends React.Component {
     this.state = {
       fullPortfolio: false,
       portfolio: [],
+      isFetching: false,
     }
   }
 
@@ -34,14 +38,14 @@ export default class HomeIndex extends React.Component {
     })
   }
 
-  async componentDidMount() {
-    $(".accordion").click(function() {
-      $(this).toggleClass("accordion--open")
-      $(this)
-        .next()
-        .slideToggle()
+  setLoader = e => {
+    this.setState({
+      isFetching: e,
     })
+  }
 
+  getPortfolio = async () => {
+    this.setLoader(true)
     await axios
       .get(
         "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
@@ -50,14 +54,31 @@ export default class HomeIndex extends React.Component {
         this.setState({
           portfolio: response.data,
         })
+        this.setLoader(false)
       })
       .catch(function(error) {
         console.log(error)
       })
-      .then(function() {})
+  }
+
+  clickAccordion = () => {
+    $(".accordion").click(function() {
+      $(this).toggleClass("accordion--open")
+      $(this)
+        .next()
+        .slideToggle()
+    })
+  }
+
+  componentDidMount() {
+    this.clickAccordion()
+    this.getPortfolio()
   }
 
   render() {
+    const { fullPortfolio, portfolio, isFetching } = this.state
+    const { handleClick } = this
+    const skills = Data.Skills
     return (
       <Layout>
         <Head metaData={MetaData} />
@@ -65,14 +86,15 @@ export default class HomeIndex extends React.Component {
         <div id="main">
           <Gallery
             title="Portfolio"
-            handleClick={this.handleClick}
-            fullPortfolio={this.state.fullPortfolio}
-            items={this.state.portfolio}
+            handleClick={handleClick}
+            fullPortfolio={fullPortfolio}
+            items={portfolio}
+            isFetching={isFetching}
           />
 
           <Services />
 
-          <Skills skills={Data.Skills} />
+          <Skills skills={skills} />
 
           <About metaData={MetaData} />
 

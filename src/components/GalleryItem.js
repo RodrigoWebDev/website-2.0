@@ -40,7 +40,6 @@ const GalleryItem = props => {
 
   function getRandomImg() {
     let randomIndex = Math.floor(Math.random() * defaultImg.length)
-    console.log(defaultImg[randomIndex])
     return defaultImg[randomIndex]
   }
 
