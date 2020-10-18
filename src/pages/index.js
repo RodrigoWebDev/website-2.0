@@ -104,7 +104,7 @@ export default class HomeIndex extends React.Component {
   componentDidMount() {
     this.clickAccordion()
     this.getPortfolio()
-    this.getLinkedinData()
+    //this.getLinkedinData()
   }
 
   render() {

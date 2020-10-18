@@ -19,7 +19,7 @@ module.exports = {
         icon: "src/assets/images/website-icon.png",
       },
     },
-    {
+    /*{
       resolve: "gatsby-plugin-load-script",
       options: {
         disable: !process.env.SENTRY_DSN,
@@ -29,7 +29,7 @@ module.exports = {
         crossorigin: "anonymous",
         onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
       },
-    },
+    }*/
     "gatsby-plugin-sass",
   ],
 }
