@@ -15,7 +15,7 @@ import defaultPortfolioImg13 from "../assets/images/portfolio-default/default-po
 
 const GalleryItem = props => {
   const obj = props.obj
-  const { homepage, html_url, description, fork, full_name } = obj
+  const { homepage, html_url, description, fork, full_name, filters } = obj
   const checkHomepage = homepage === null || homepage === ""
   const link = checkHomepage ? html_url : homepage
   const name = obj.name.split("-").join(" ")
@@ -34,8 +34,12 @@ const GalleryItem = props => {
     defaultPortfolioImg12,
     defaultPortfolioImg13,
   ]
-  const src = checkHomepage
+  /*const src = checkHomepage
     ? getRandomImg()
+    : `https://raw.githubusercontent.com/${full_name}/master/thumb.jpg`*/
+
+  const src = checkHomepage
+    ? defaultPortfolioImg1
     : `https://raw.githubusercontent.com/${full_name}/master/thumb.jpg`
 
   function getRandomImg() {
@@ -50,6 +54,7 @@ const GalleryItem = props => {
         rel="noopener noreferrer"
         className="portfolio-link"
         href={link}
+        filter={filters}
       >
         <div className="portfolio__img-box">
           <img src={src} alt={name} />
