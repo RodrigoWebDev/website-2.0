@@ -20,7 +20,7 @@ import Filters from "../components/Filters"
 //data
 import DataJson from "../data/data.json"
 
-function Index(){
+export default () => {
   const [fullPortfolio, setFullPortfolio] = useState(false)
   const [portfolio, setPortfolio] = useState([])
   const [filters, setFilters] = useState([])
@@ -104,8 +104,6 @@ function Index(){
     </Layout>
   )
 }
-
-export default Index
 
 /*export default class HomeIndex extends React.Component {
   constructor(props) {

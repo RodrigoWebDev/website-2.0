@@ -13,7 +13,7 @@ import defaultPortfolioImg11 from "../assets/images/portfolio-default/default-po
 import defaultPortfolioImg12 from "../assets/images/portfolio-default/default-portfolio-img12.png"
 import defaultPortfolioImg13 from "../assets/images/portfolio-default/default-portfolio-img13.png"
 
-const GalleryItem = props => {
+export default props => {
   const obj = props.obj
   const { homepage, html_url, description, fork, full_name, filters } = obj
   const checkHomepage = homepage === null || homepage === ""
@@ -65,5 +65,3 @@ const GalleryItem = props => {
     </div>
   )
 }
-
-export default GalleryItem
