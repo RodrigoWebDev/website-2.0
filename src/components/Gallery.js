@@ -12,7 +12,7 @@ export default props => {
     const { items } = props
 
     if (!items) return
-
+    
     if (c === "<") {
       gallery = items.map((item, i) => {
         if (i <= 3) {
