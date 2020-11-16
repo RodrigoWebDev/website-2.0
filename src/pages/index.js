@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-import axios from "axios"
 
 //Styles
 import "../assets/scss/main.scss"
@@ -14,7 +13,6 @@ import About from "../sections/About"
 
 //Componets
 import Gallery from "../components/Gallery"
-import Load from "../components/Loader"
 import Filters from "../components/Filters"
 
 //data
@@ -35,6 +33,7 @@ export default () => {
   const removeDuplicates = array => array.filter((a, b) => array.indexOf(a) === b);
 
   const getPortfolio = () => {
+    setIsFetching(true)
     var tempFilters = []
     var url1 = "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
     //var url1 = "https://api.github.com/repos/RodrigoWebDev/my-website"
@@ -62,6 +61,7 @@ export default () => {
         //})
 
         datum.then(data => {
+          setIsFetching(false)
           setPortfolio(data)
           setNoFilterPortfolio(data)
           setFilters(removeDuplicates(tempFilters))
