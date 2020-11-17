@@ -1,4 +1,7 @@
-import React, {useState, useEffect} from "react"
+import React, {
+  useState,
+  useEffect
+} from "react"
 
 //Styles
 import "../assets/scss/main.scss"
@@ -34,38 +37,31 @@ export default () => {
 
   const getPortfolio = () => {
     setIsFetching(true)
-    var tempFilters = []
-    var url1 = "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
-    //var url1 = "https://api.github.com/repos/RodrigoWebDev/my-website"
-    var datum = fetch(url1)
-      .then((response) => response.json())
-      .then((data) => {
-          return Promise.all(data.map(item => {
-            //item.full_name returns the repositorie name
-            return fetch(`https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`)
-              .then(data => data.text())
-              .then(data => {
-                if(data !== "404: Not Found"){
-                  item["filters"] = JSON.parse(data)
-                  tempFilters.push(...JSON.parse(data))
-                }else{
-                  item["filters"] = ""
-                }
+    let projects;
+    let filters = []
+    fetch("https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created")
+      .then(data => data.json())
+      .then(data => {
+        projects = data
+        let urls = data.map(item => `https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`)
+        let tempFilters = urls.map(item => fetch(item).then(data => data.json()).catch(err => ""))
 
-                return item
-              })
-          }));
-        })
-        //.then(data => {
-          //setPortfolio(data)
-        //})
+        Promise.all(tempFilters)
+          .then(data => {
+            var newFilters = [];
+            projects.map((item, i) => item["filters"] = data[i])
+            filters = data.filter(item => item !== "")
+            filters.forEach(item => {
+              //debugger
+              newFilters = newFilters.concat(item)
+            })
 
-        datum.then(data => {
-          setIsFetching(false)
-          setPortfolio(data)
-          setNoFilterPortfolio(data)
-          setFilters(removeDuplicates(tempFilters))
-        })
+            setPortfolio(projects)
+            setNoFilterPortfolio(projects)
+            setFilters(removeDuplicates(newFilters))
+            setIsFetching(false)
+          })
+      })
   }
 
   const clickFilters = filter => {
@@ -78,32 +74,63 @@ export default () => {
     getPortfolio()
   }, [])
 
-  return(
-    <Layout>
-      <Head metaData={MetaData} />
+  return ( <
+    Layout >
+    <
+    Head metaData = {
+      MetaData
+    }
+    />
 
-      <div id="main">
-        <Filters
-          filters={filters}
-          clickFilters={clickFilters}
-        />
+    <
+    div id = "main" >
+    <
+    Filters filters = {
+      filters
+    }
+    clickFilters = {
+      clickFilters
+    }
+    />
 
-        <Gallery
-          title="Portfolio"
-          handleClick={handleClick}
-          fullPortfolio={fullPortfolio}
-          items={portfolio}
-          isFetching={isFetching}
-        />
+    <
+    Gallery title = "Portfolio"
+    handleClick = {
+      handleClick
+    }
+    fullPortfolio = {
+      fullPortfolio
+    }
+    items = {
+      portfolio
+    }
+    isFetching = {
+      isFetching
+    }
+    />
 
-        <Services serv={services} />
+    <
+    Services serv = {
+      services
+    }
+    />
 
-        <Skills skills={skills} />
+    <
+    Skills skills = {
+      skills
+    }
+    />
 
-        <About metaData={MetaData} />
+    <
+    About metaData = {
+      MetaData
+    }
+    />
 
-        <Contact />
-      </div>
-    </Layout>
+    <
+    Contact / >
+    <
+    /div> < /
+    Layout >
   )
 }
