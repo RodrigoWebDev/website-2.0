@@ -1,0 +1,14 @@
+.tag {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0px 14px;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tag-active{
+  background: black;
+}

@@ -1,27 +1,25 @@
-import React, {useState, useEffect} from "react"
-import axios from "axios"
+import React, { useState, useEffect, useRef } from "react";
 
 //Styles
-import "../assets/scss/main.scss"
+import "../assets/scss/main.scss";
 
 //sections
-import Layout from "../sections/layout"
-import Head from "../sections/Head"
-import Skills from "../sections/Skills"
-import Contact from "../sections/Contact"
-import Services from "../sections/Services.js"
-import About from "../sections/About"
+import Layout from "../sections/layout";
+import Head from "../sections/Head";
+import Skills from "../sections/Skills";
+import Contact from "../sections/Contact";
+import Services from "../sections/Services.js";
+import About from "../sections/About";
 
 //Componets
-import Gallery from "../components/Gallery"
-import Load from "../components/Loader"
-import Filters from "../components/Filters"
+import Gallery from "../components/Gallery";
 
 //data
-import DataJson from "../data/data.json"
+import DataJson from "../data/data.json";
 
 export default () => {
   const [fullPortfolio, setFullPortfolio] = useState(false)
+  const [noFilterPortfolio, setNoFilterPortfolio] = useState([])
   const [portfolio, setPortfolio] = useState([])
   const [filters, setFilters] = useState([])
   const [isFetching, setIsFetching] = useState(false)
@@ -29,63 +27,107 @@ export default () => {
   const MetaData = Data.MetaData[0]
   const skills = Data.Skills
   const services = Data.services
-  const handleClick = () => setFullPortfolio(!fullPortfolio)
-  const setLoader = e => setIsFetching(e)
-  const removeDuplicates = array => array.filter((a, b) => array.indexOf(a) === b);
+  const galleryRef = useRef(null)
 
-  const getPortfolio = async () => {
-    const url = "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
-    fetch(url)
-      .then((response) => response.json())
+  const setLoader = (e) => setIsFetching(e)
+  const removeDuplicates = (array) => array.filter((a, b) => array.indexOf(a) === b)
+
+  const handleClick = () => {
+    setFullPortfolio(!fullPortfolio)
+    //window.scrollTo(0,0)
+    galleryRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  const getPortfolio = () => {
+    setIsFetching(true);
+    let projects;
+    let filters = [];
+    fetch(
+      "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
+    )
+      .then((data) => data.json())
       .then((data) => {
-        setPortfolio(data)
-        //console.log("getDataFilters() ==>", getDataFilters())
+        projects = data;
+        let urls = data.map(
+          (item) =>
+            `https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`
+        );
+        let tempFilters = urls.map((item) =>
+          fetch(item)
+            .then((data) => data.json())
+            .catch((err) => "")
+        );
 
-        /*function getDataFilters(){
-          return data.map(item => {
-            fetch(`https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`)
-              .then(data => {
-                item["filters"] = data
-                return item
-              })
+        Promise.all(tempFilters).then((data) => {
+          let newFilters = []
+          let filtersObjects = []
+          projects.map((item, i) => (item["filters"] = data[i]))
+          filters = data.filter((item) => item !== "")
+          filters.forEach((item) => {
+            //debugger
+            newFilters = newFilters.concat(item)
           })
-        }
 
-        data.forEach(item => {
-          fetch(`https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`)
-            .then(data => data.json())
-            .then(data => {
-              console.log("data ==>", data)
-              setFilters([...filters, ...data])
+          filtersObjects = removeDuplicates(newFilters).map(item => {
+            return {
+              filter: item,
+              active: false
+            }
+          })
 
-              return filters
-            })
-            .then(data => {
-              setFilters(removeDuplicates())
-            });
-        });*/
+          setPortfolio(projects)
+          setNoFilterPortfolio(projects)
+          setFilters(filtersObjects)
+          setIsFetching(false);
+        });
       });
   };
 
-  const clickFilters = filter => {
-    //let portfolio = this.state.portfolio
-    //portfolio.filter( item => item === )
-  }
+  const clickFilters = (filter) => {
+    let tratedFilters = filters
+    let filteredPortfolio = noFilterPortfolio.filter((item) =>
+      item.filters.includes(filter)
+    );
+
+    setPortfolio(noFilterPortfolio);
+
+    tratedFilters.forEach(item => {
+      if(item.filter === filter && item.active === false){
+        item.active = true
+      }else{
+        item.active = false
+      }
+    })
+
+    if(hasFilterActive()){
+      setPortfolio(filteredPortfolio);
+    }else{
+      setPortfolio(noFilterPortfolio);
+    }
+
+    setFilters(tratedFilters)
+
+    function hasFilterActive(){
+      return tratedFilters.some(item => {
+        return item.active === true
+      })
+    }
+  };
 
   useEffect(() => {
-    getPortfolio()
-  })
+    getPortfolio();
+  }, []);
 
-  return(
+  return (
     <Layout>
       <Head metaData={MetaData} />
-      <Filters
-        filters={filters}
-        clickFilters={clickFilters}
-      />
-
       <div id="main">
         <Gallery
+          galleryRef={galleryRef}
+          filters={filters}
+          clickFilters={clickFilters}
           title="Portfolio"
           handleClick={handleClick}
           fullPortfolio={fullPortfolio}
@@ -100,38 +142,7 @@ export default () => {
         <About metaData={MetaData} />
 
         <Contact />
-      </div>
+      </div>{" "}
     </Layout>
-  )
-}
-
-/*export default class HomeIndex extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullPortfolio: false,
-      portfolio: [],
-      filters: [],
-      isFetching: false,
-    };
-  }
-
-  handleClick = (e) => {
-    this.setState({
-      fullPortfolio: !this.state.fullPortfolio,
-    });
-  };
-
-  setLoader = (e) => {
-    this.setState({
-      isFetching: e,
-    });
-  };
-
-  removeDuplicates = (array) => array.filter((a, b) => array.indexOf(a) === b);
-
-  render() {
-
-    );
-  }
-}*/
+  );
+};

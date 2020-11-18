@@ -1,0 +1,10 @@
+.filters{
+  padding-left: 0;
+}
+
+.filters__title{
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 10px;
+  color: #787878;
+}
