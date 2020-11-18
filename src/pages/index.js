@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //Styles
 import "../assets/scss/main.scss";
@@ -27,13 +27,18 @@ export default () => {
   const MetaData = Data.MetaData[0]
   const skills = Data.Skills
   const services = Data.services
+  const galleryRef = useRef(null)
 
   const setLoader = (e) => setIsFetching(e)
   const removeDuplicates = (array) => array.filter((a, b) => array.indexOf(a) === b)
 
   const handleClick = () => {
     setFullPortfolio(!fullPortfolio)
-    window.scrollTo(0,0)
+    //window.scrollTo(0,0)
+    galleryRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+    console.log(galleryRef)
   }
 
   const getPortfolio = () => {
@@ -57,28 +62,61 @@ export default () => {
         );
 
         Promise.all(tempFilters).then((data) => {
-          var newFilters = [];
-          projects.map((item, i) => (item["filters"] = data[i]));
-          filters = data.filter((item) => item !== "");
+          let newFilters = []
+          let filtersObjects = []
+          projects.map((item, i) => (item["filters"] = data[i]))
+          filters = data.filter((item) => item !== "")
           filters.forEach((item) => {
             //debugger
-            newFilters = newFilters.concat(item);
-          });
+            newFilters = newFilters.concat(item)
+          })
 
-          setPortfolio(projects);
-          setNoFilterPortfolio(projects);
-          setFilters(removeDuplicates(newFilters));
+          filtersObjects = removeDuplicates(newFilters).map(item => {
+            return {
+              filter: item,
+              active: false
+            }
+          })
+
+          console.log(filtersObjects)
+
+          setPortfolio(projects)
+          setNoFilterPortfolio(projects)
+          setFilters(filtersObjects)
           setIsFetching(false);
         });
       });
   };
 
   const clickFilters = (filter) => {
-    setPortfolio(noFilterPortfolio);
+    let tratedFilters = filters
     let filteredPortfolio = noFilterPortfolio.filter((item) =>
       item.filters.includes(filter)
     );
-    setPortfolio(filteredPortfolio);
+
+    setPortfolio(noFilterPortfolio);
+
+    tratedFilters.forEach(item => {
+      if(item.filter === filter && item.active === false){
+        item.active = true
+      }else{
+        item.active = false
+      }
+    })
+
+    if(hasFilterActive()){
+      setPortfolio(filteredPortfolio);
+    }else{
+      setPortfolio(noFilterPortfolio);
+    }
+
+    setFilters(tratedFilters)
+
+    function hasFilterActive(){
+      return tratedFilters.some(item => {
+        return item.active === true
+      })
+    }
   };
 
   useEffect(() => {
@@ -90,6 +128,7 @@ export default () => {
       <Head metaData={MetaData} />
       <div id="main">
         <Gallery
+          galleryRef={galleryRef}
           filters={filters}
           clickFilters={clickFilters}
           title="Portfolio"

@@ -31,9 +31,7 @@ export default props => {
     return gallery
   }
 
-  const { fullPortfolio, title, handleClick, isFetching, filters, clickFilters } = props
-  //const { gallery, floatButton } = this
-  //const btnText = fullPortfolio ? "Hide portfolio" : "See full portfolio"
+  const { fullPortfolio, title, handleClick, isFetching, filters, clickFilters, galleryRef } = props
   const button = <Button handleClick={handleClick}>See full portfolio</Button>
   const floatButton = (
     <Button handleClick={handleClick} className="button-float">
@@ -48,7 +46,7 @@ export default props => {
   const renderFilters = (!isFetching && fullPortfolio) ? <Filters filters={filters} clickFilters={clickFilters} /> : null
 
   return (
-    <section id="two" className="portfolio-home">
+    <section id="two" className="portfolio-home" ref={galleryRef}>
       <Title>{title}</Title>
       {renderLoader}
       {renderFilters}
