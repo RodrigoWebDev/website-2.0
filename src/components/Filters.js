@@ -1,14 +1,12 @@
 import React from "react"
-import "./tag.css"
+import Tag from "./Tag"
+import "./filters.css"
 
 export default props => {
   return (
-    <ul id="filters">
-    {
-      props.filters.map(item => {
-        return <li className="tag" onClick={() => props.clickFilters(item)} data-filter={item}>{item}</li>
-      })
-    }
+    <ul class="filters">
+      <span class="filters__title">Filters: </span>
+      {props.filters.map(item => <Tag clickFilters={props.clickFilters} dataItem={item}/>)}
     </ul>
   )
 }

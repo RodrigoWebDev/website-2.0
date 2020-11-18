@@ -1,25 +1,21 @@
-import React, {
-  useState,
-  useEffect
-} from "react"
+import React, { useState, useEffect } from "react";
 
 //Styles
-import "../assets/scss/main.scss"
+import "../assets/scss/main.scss";
 
 //sections
-import Layout from "../sections/layout"
-import Head from "../sections/Head"
-import Skills from "../sections/Skills"
-import Contact from "../sections/Contact"
-import Services from "../sections/Services.js"
-import About from "../sections/About"
+import Layout from "../sections/layout";
+import Head from "../sections/Head";
+import Skills from "../sections/Skills";
+import Contact from "../sections/Contact";
+import Services from "../sections/Services.js";
+import About from "../sections/About";
 
 //Componets
-import Gallery from "../components/Gallery"
-import Filters from "../components/Filters"
+import Gallery from "../components/Gallery";
 
 //data
-import DataJson from "../data/data.json"
+import DataJson from "../data/data.json";
 
 export default () => {
   const [fullPortfolio, setFullPortfolio] = useState(false)
@@ -31,106 +27,86 @@ export default () => {
   const MetaData = Data.MetaData[0]
   const skills = Data.Skills
   const services = Data.services
-  const handleClick = () => setFullPortfolio(!fullPortfolio)
-  const setLoader = e => setIsFetching(e)
-  const removeDuplicates = array => array.filter((a, b) => array.indexOf(a) === b);
+
+  const setLoader = (e) => setIsFetching(e)
+  const removeDuplicates = (array) => array.filter((a, b) => array.indexOf(a) === b)
+
+  const handleClick = () => {
+    setFullPortfolio(!fullPortfolio)
+    window.scrollTo(0,0)
+  }
 
   const getPortfolio = () => {
-    setIsFetching(true)
+    setIsFetching(true);
     let projects;
-    let filters = []
-    fetch("https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created")
-      .then(data => data.json())
-      .then(data => {
-        projects = data
-        let urls = data.map(item => `https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`)
-        let tempFilters = urls.map(item => fetch(item).then(data => data.json()).catch(err => ""))
+    let filters = [];
+    fetch(
+      "https://api.github.com/users/RodrigoWebDev/repos?per_page=100&sort=created"
+    )
+      .then((data) => data.json())
+      .then((data) => {
+        projects = data;
+        let urls = data.map(
+          (item) =>
+            `https://raw.githubusercontent.com/${item.full_name}/master/built-with.json`
+        );
+        let tempFilters = urls.map((item) =>
+          fetch(item)
+            .then((data) => data.json())
+            .catch((err) => "")
+        );
 
-        Promise.all(tempFilters)
-          .then(data => {
-            var newFilters = [];
-            projects.map((item, i) => item["filters"] = data[i])
-            filters = data.filter(item => item !== "")
-            filters.forEach(item => {
-              //debugger
-              newFilters = newFilters.concat(item)
-            })
+        Promise.all(tempFilters).then((data) => {
+          var newFilters = [];
+          projects.map((item, i) => (item["filters"] = data[i]));
+          filters = data.filter((item) => item !== "");
+          filters.forEach((item) => {
+            //debugger
+            newFilters = newFilters.concat(item);
+          });
 
-            setPortfolio(projects)
-            setNoFilterPortfolio(projects)
-            setFilters(removeDuplicates(newFilters))
-            setIsFetching(false)
-          })
-      })
-  }
+          setPortfolio(projects);
+          setNoFilterPortfolio(projects);
+          setFilters(removeDuplicates(newFilters));
+          setIsFetching(false);
+        });
+      });
+  };
 
-  const clickFilters = filter => {
-    setPortfolio(noFilterPortfolio)
-    let filteredPortfolio = noFilterPortfolio.filter(item => item.filters.includes(filter))
-    setPortfolio(filteredPortfolio)
-  }
+  const clickFilters = (filter) => {
+    setPortfolio(noFilterPortfolio);
+    let filteredPortfolio = noFilterPortfolio.filter((item) =>
+      item.filters.includes(filter)
+    );
+    setPortfolio(filteredPortfolio);
+  };
 
   useEffect(() => {
-    getPortfolio()
-  }, [])
+    getPortfolio();
+  }, []);
 
-  return ( <
-    Layout >
-    <
-    Head metaData = {
-      MetaData
-    }
-    />
+  return (
+    <Layout>
+      <Head metaData={MetaData} />
+      <div id="main">
+        <Gallery
+          filters={filters}
+          clickFilters={clickFilters}
+          title="Portfolio"
+          handleClick={handleClick}
+          fullPortfolio={fullPortfolio}
+          items={portfolio}
+          isFetching={isFetching}
+        />
 
-    <
-    div id = "main" >
-    <
-    Filters filters = {
-      filters
-    }
-    clickFilters = {
-      clickFilters
-    }
-    />
+        <Services serv={services} />
 
-    <
-    Gallery title = "Portfolio"
-    handleClick = {
-      handleClick
-    }
-    fullPortfolio = {
-      fullPortfolio
-    }
-    items = {
-      portfolio
-    }
-    isFetching = {
-      isFetching
-    }
-    />
+        <Skills skills={skills} />
 
-    <
-    Services serv = {
-      services
-    }
-    />
+        <About metaData={MetaData} />
 
-    <
-    Skills skills = {
-      skills
-    }
-    />
-
-    <
-    About metaData = {
-      MetaData
-    }
-    />
-
-    <
-    Contact / >
-    <
-    /div> < /
-    Layout >
-  )
-}
+        <Contact />
+      </div>{" "}
+    </Layout>
+  );
+};

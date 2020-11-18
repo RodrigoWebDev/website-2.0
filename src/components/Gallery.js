@@ -4,6 +4,7 @@ import GalleryItem from "./GalleryItem"
 import Button from "./Button"
 import Title from "./Title"
 import Loader from "./Loader"
+import Filters from "../components/Filters";
 import "./gallery.css"
 
 export default props => {
@@ -12,7 +13,7 @@ export default props => {
     const { items } = props
 
     if (!items) return
-    
+
     if (c === "<") {
       gallery = items.map((item, i) => {
         if (i <= 3) {
@@ -30,27 +31,30 @@ export default props => {
     return gallery
   }
 
-  const { fullPortfolio, title, handleClick, isFetching } = props
+  const { fullPortfolio, title, handleClick, isFetching, filters, clickFilters } = props
   //const { gallery, floatButton } = this
-  const btnText = fullPortfolio ? "Hide portfolio" : "See full portfolio"
-  const renderFullGallery = fullPortfolio ? renderGallery(">") : null
+  //const btnText = fullPortfolio ? "Hide portfolio" : "See full portfolio"
+  const button = <Button handleClick={handleClick}>See full portfolio</Button>
   const floatButton = (
     <Button handleClick={handleClick} className="button-float">
       Hide Portfolio
     </Button>
   )
+
+  const renderFullGallery = fullPortfolio ? renderGallery(">") : null
   const renderfloatButton = fullPortfolio && floatButton
+  const renderButton = !fullPortfolio && button
   const renderLoader = isFetching ? <Loader /> : null
+  const renderFilters = (!isFetching && fullPortfolio) ? <Filters filters={filters} clickFilters={clickFilters} /> : null
 
   return (
     <section id="two" className="portfolio-home">
       <Title>{title}</Title>
       {renderLoader}
+      {renderFilters}
       <div className="portfolio-grid">
         {renderGallery("<")}
-        <div className="button-portfolio-container">
-          <Button handleClick={handleClick}>{btnText}</Button>
-        </div>
+        <div className="button-portfolio-container">{renderButton}</div>
         {renderFullGallery}
         {renderfloatButton}
       </div>
