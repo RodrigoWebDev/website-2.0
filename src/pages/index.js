@@ -38,7 +38,6 @@ export default () => {
     galleryRef.current.scrollIntoView({
       behavior: "smooth",
     });
-    console.log(galleryRef)
   }
 
   const getPortfolio = () => {
@@ -77,8 +76,6 @@ export default () => {
               active: false
             }
           })
-
-          console.log(filtersObjects)
 
           setPortfolio(projects)
           setNoFilterPortfolio(projects)
